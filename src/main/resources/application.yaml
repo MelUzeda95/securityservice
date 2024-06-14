@@ -1,0 +1,26 @@
+application:
+  title: security-service
+  description: This project is a security service for a web application
+  version: 0.0.1-SNAPSHOT
+
+spring:
+  application:
+    name: security-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/nombre_basedatos
+    username: tu_usuario
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
