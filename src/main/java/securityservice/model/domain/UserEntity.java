@@ -1,10 +1,10 @@
 package securityservice.model.domain;
 
+import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import securityservice.util.constant.ConstantsEntity;
-
-import javax.persistence.*;
 
 @Data
 @Entity
@@ -38,7 +38,7 @@ public class UserEntity extends Audit {
     @Column(name = ConstantsEntity.UserTable.Email.NAME, length = ConstantsEntity.UserTable.Email.LENGTH)
     private String email;
 
-    @Type(type = "org.hibernate.type.NumericBooleanType")
+    @JdbcTypeCode(SqlTypes.BOOLEAN)
     @Column(name = ConstantsEntity.UserTable.IsDeleted.NAME, nullable = false)
     private Boolean isDeleted;
 

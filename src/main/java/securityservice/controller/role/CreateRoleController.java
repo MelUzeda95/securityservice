@@ -15,7 +15,7 @@ import securityservice.api.response.role.RoleResponse;
 import securityservice.command.role.CreateRoleCommand;
 import securityservice.util.constant.ConstantsController;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 
 @Tag(name = ConstantsController.RoleTag.NAME, description = ConstantsController.RoleTag.DESCRIPTION)

@@ -1,10 +1,11 @@
 package securityservice.model.domain;
 
+import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import securityservice.util.constant.ConstantsEntity;
 
-import javax.persistence.*;
 import java.util.List;
 
 @Data
@@ -25,7 +26,7 @@ public class RoleEntity extends Audit {
     @OneToMany(mappedBy = ConstantsEntity.RoleTable.NAME, fetch = FetchType.LAZY, targetEntity = UserEntity.class)
     private List<UserEntity> users;
 
-    @Type(type = "org.hibernate.type.NumericBooleanType")
+    @JdbcTypeCode(SqlTypes.BOOLEAN)
     @Column(name = ConstantsEntity.RoleTable.IsDeleted.NAME, nullable = false)
     private Boolean isDeleted;
 

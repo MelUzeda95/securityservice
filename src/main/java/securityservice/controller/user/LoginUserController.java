@@ -15,7 +15,7 @@ import securityservice.api.response.user.UserResponse;
 import securityservice.command.user.LoginUserCommand;
 import securityservice.util.constant.ConstantsController;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Tag(name = ConstantsController.UserTag.NAME, description = ConstantsController.UserTag.DESCRIPTION)
 @RequestMapping(value = ConstantsController.BasePath.USER)

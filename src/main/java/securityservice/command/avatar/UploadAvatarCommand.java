@@ -1,10 +1,8 @@
 package securityservice.command.avatar;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -17,6 +15,7 @@ import securityservice.exception.ProcessErrorException;
 import securityservice.service.avatar.UploadAvatarService;
 
 import java.io.IOException;
+import java.util.Base64;
 
 @Slf4j
 @Service
@@ -52,9 +51,9 @@ public class UploadAvatarCommand extends AbstractCommand {
 
     private String convertFileToBase64(MultipartFile file) {
         try {
-            return new String(Base64.encodeBase64(file.getBytes()));
+            return Base64.getEncoder().encodeToString(file.getBytes());
         } catch (IOException e) {
-            throw new ProcessErrorException("Error convert avatar to base64");
+            throw new ProcessErrorException("Error converting avatar to base64", e);
         }
     }
 }

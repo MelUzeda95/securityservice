@@ -32,6 +32,7 @@ public class GetUsersController {
     public CommonResponse<List<UserResponse>> getUsersByIds(@PathVariable List<Integer> usersIds) {
         getUsersCommand.setInput(usersIds);
         getUsersCommand.execute();
-        return new CommonResponse<>(getUsersCommand.getOutput());
+        CommonResponse<T> tCommonResponse = new CommonResponse<>(getUsersCommand.getOutput());
+        return tCommonResponse;
     }
 }

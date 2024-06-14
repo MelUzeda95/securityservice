@@ -14,7 +14,7 @@ import securityservice.api.response.user.UserResponse;
 import securityservice.command.avatar.UploadAvatarCommand;
 import securityservice.util.constant.ConstantsController;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Tag(name = ConstantsController.AvatarTag.NAME, description = ConstantsController.AvatarTag.DESCRIPTION)
 @RequestMapping(value = ConstantsController.BasePath.AVATAR)

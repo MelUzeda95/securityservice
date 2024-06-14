@@ -13,7 +13,7 @@ import securityservice.api.response.user.UserResponse;
 import securityservice.command.role.AssignRoleToUserCommand;
 import securityservice.util.constant.ConstantsController;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Tag(name = ConstantsController.RoleTag.NAME, description = ConstantsController.RoleTag.DESCRIPTION)
 @RequestMapping(value = ConstantsController.BasePath.ROLE)
