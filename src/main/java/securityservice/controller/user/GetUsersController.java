@@ -12,7 +12,6 @@ import securityservice.api.response.user.UserResponse;
 import securityservice.command.user.GetUserCommand;
 import securityservice.util.constant.ConstantsController;
 
-import java.util.Collections;
 import java.util.List;
 
 @Tag(name = ConstantsController.UserTag.NAME, description = ConstantsController.UserTag.DESCRIPTION)
@@ -32,7 +31,7 @@ public class GetUsersController {
     public CommonResponse<List<UserResponse>> getUsersByIds(@PathVariable Integer usersIds) {
         getUsersCommand.setInput(usersIds);
         getUsersCommand.execute();
-        List<UserResponse> users = Collections.singletonList(getUsersCommand.getOutput());
+        List<UserResponse> users = getUsersCommand.getOutput();
         return new CommonResponse<>(users);
     }
 }

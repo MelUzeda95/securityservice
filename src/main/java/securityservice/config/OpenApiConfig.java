@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenApiConfig {
+
     @Value("${application.title}")
     private String title;
 
@@ -30,3 +31,4 @@ public class OpenApiConfig {
                 .version(this.version);
     }
 }
+
