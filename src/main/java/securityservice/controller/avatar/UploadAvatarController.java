@@ -20,6 +20,7 @@ import jakarta.validation.Valid;
 @RequestMapping(value = ConstantsController.BasePath.AVATAR)
 @RestController
 @RequestScope
+
 public class UploadAvatarController {
 
     private final UploadAvatarCommand uploadAvatarCommand;

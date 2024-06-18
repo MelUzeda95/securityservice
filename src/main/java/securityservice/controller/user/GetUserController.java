@@ -17,6 +17,7 @@ import securityservice.util.constant.ConstantsController;
 @RequestMapping(value = ConstantsController.BasePath.USER)
 @RestController
 @RequestScope
+
 public class GetUserController {
 
     private final GetUserCommand getUserCommand;

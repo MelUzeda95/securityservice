@@ -21,6 +21,8 @@ import jakarta.validation.Valid;
 @RequestMapping(value = ConstantsController.BasePath.USER)
 @RestController
 @RequestScope
+
+
 public class LoginUserController {
 
     private final LoginUserCommand loginUserCommand;

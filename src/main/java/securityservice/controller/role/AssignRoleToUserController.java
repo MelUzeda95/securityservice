@@ -19,6 +19,7 @@ import jakarta.validation.Valid;
 @RequestMapping(value = ConstantsController.BasePath.ROLE)
 @RestController
 @RequestScope
+
 public class AssignRoleToUserController {
 
     private final AssignRoleToUserCommand assignRoleToUserCommand;

@@ -18,6 +18,7 @@ import java.util.List;
 @RequestMapping(value = ConstantsController.BasePath.USER)
 @RestController
 @RequestScope
+
 public class GetUsersController {
 
     private final GetUserCommand getUsersCommand;

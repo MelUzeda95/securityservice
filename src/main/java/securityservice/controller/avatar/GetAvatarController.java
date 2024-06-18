@@ -19,6 +19,8 @@ import securityservice.util.constant.ConstantsController;
 @RequestMapping(value = ConstantsController.BasePath.AVATAR)
 @RestController
 @RequestScope
+
+
 public class GetAvatarController {
 
     private final GetAvatarCommand getAvatarCommand;
